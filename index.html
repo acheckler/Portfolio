@@ -1,105 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
- 
-<head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale: 1">
-   <title>Allie's Portfolio</title>
-   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
-   <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
- 
-<body>
- 
-   <header>
-       <h1> Allie Heckler </h1>
-       <nav>
-           <ul id="menu">
-               <li> <a href="#home" target="_blank">Home</a></li>
-               <li> <a href="#about" target="_blank">About</a></li>
-               <li> <a href="#portfolio" target="_blank">GitHub</a></li>
-               <li> <a href="#contact">Contact</a></li>
-           </ul>
-       </nav>
-   </header>
- 
-   <main>
-       <!-- Intro -->
-       <section id="home">
-           <div class="intro">
-               <h2> Hi, I'm Allie! </h2>
-               <p> I am a software developer in the making, and I am currently living in Milwaukee, Wisconsin.
-                   I'm currently working as a personal trainer, yoga instructor, and a retail associate at lululemon
-                   athletica.
-                   During the covid-19 pandemic, I began re-evaluating the current direction of my life and my career.
-                   After a suggestion from a family member and a client, I gave coding a try. I was hooked!
-               </p>
-           </div>
- 
-       </section>
- 
-       <!-- About Me -->
-       <section id="about">
-           <div class="group">
-               <div class="item">
-                   <h2> About Me </h2>
-                   <p> I am a student of the Bloc web development program. My languages include: </p>
-                   <ul id="languages">
-                       <li> Javascript </li>
-                       <li> HTML/CSS </li>
-                   </ul>
-                   <p> To enter into my current field I became a certified personal trainer through the National
-                       Academy of Sports Medicine,
-                       and I completed a 200 hour Yoga Teacher Training through a studio in the Milwaukee area. </p>
-                   <p> Besides weight lifting and practicing yoga, I also enjoy painting, reading, and hiking.
-                   </p>
-               </div>
-           </div>
-       </section>
- 
- 
-       <!-- Projects -->
-       <section id="portfolio">
-           <h2> My Projects </h2>
-           <img src="Content-Screenshot.jpg" alt="Screenshot of my application">
-           <h3>Social Media Content Curator</h3>
-           <p> I developed an app that assists users collecting content for social media posts. It's purpose is to be used when the user has a topic or idea as a jumping off point, and they now need content for it. </p>
-           <p> I used Javascript, jQuery, HTML, CSS, and two public APIs.</p>
-           <a href = https://github.com/acheckler/IG_Content_Inspo_App>GitHub Repository</a>
-           <a href = https://acheckler.github.io/IG_Content_Inspo_App>Live Website</a>
- 
- 
- 
-       </section>
- 
-       <section>
-           <h2> My Services </h2>
-           <p> I offer web page development and improvement services to businesses using HTML/CSS and javascript.
-           </p>
-       </section>
- 
-       <!-- Contact -->
-       <section id="contact">
-           <h2> Contact Me </h2>
-           <p> Reach out to me with any questions you may have or projects you may need help with. I am searching for a
-               full-time software development position but I am also currently available for contract work. </p>
-               <form action="https://formspree.io/f/xrgoojvn" method="POST">
-               <label for="user-name">Name:</label>
-               <input id="user-name" type="text" name="name">
- 
-               <label for="user-email">Email: </label>
-               <input id="user-email" type="text" name="email">
- 
-               <label for="user-message">Message:</label>
-               <textarea id="user-message" name=message></textarea>
- 
-               <input type="submit" value = "Submit" id = "submit-button">
- 
-           </form>
-           <a href="https://www.linkedin.com/in/allison-heckler/"> LinkedIn </a>
-           <a href="https://github.com/acheckler"> GitHub</a>
-           <a href="mailto:allisonheckler@gmail.com"> Email </a>
- 
-       </section>
-   </main>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale: 1" />
+    <title>Allie Heckler</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script
+      src="https://kit.fontawesome.com/e069cc186d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul id="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Intro -->
+      <section id="home">
+        <div class="intro">
+          <div class="intro-text">
+            <h3>Hello! My name is</h3>
+            <h1>Allie Heckler</h1>
+            <h2>
+               and I'm a <span id="highlight">full-stack web developer</span>
+            </h2>
+          </div>
+          <div class="intro-image">
+            <img src="/images/Allie.png" alt="allie" />
+          </div>
+        </div>
+      </section>
+
+      <!-- About Me -->
+      <section id="about">
+        <div class="bio">
+          <h2>About Me</h2>
+          <p>
+            I am a soon-to-be Bloc bootcamp graduate living in Milwaukee,
+            Wisconsin. I have experience building responsive web-based
+            applications. I specialize in
+            <span class="lang-span"
+              >JavaScript ES6, React, Node, and PostgreSQL.</span
+            >
+          </p>
+
+          <p>
+            As soon as I started working with JS in 2020, I was hooked. I grew
+            up enamored with video games and all things tech, but I never
+            thought I could learn how to code, mostly because I had never been
+            exposed to it. So once a friend (and programmer) encouraged me to
+            try it, I finally did. A few weeks later I enrolled in a boot camp,
+            and never looked back!
+          </p>
+
+          <p>
+            I hope one day I can share my passion with young women and empower
+            them to pursue their interests in tech, as I wish someone had done
+            the same for me!
+          </p>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects">
+        <h2>Projects</h2>
+        <div id="tinctor">
+          <div class="t-image">
+            <img src="images/tinctor-1.png" alt="tinctor" />
+          </div>
+          <div class="t-text">
+            <h3>Tinctor</h3>
+            <p>
+              Tinctor was designed to optimize the cost-analysis process for a
+              small CBD business (hence the name Tinctor, tincture +
+              calculator).
+             </p>
+             <p>
+              <span class="lang-span2">Built using ReactJs, NodeJs, ExpressJs, PostgreSQL and CSS3.</span>
+            </p>
+            <a href="https://github.com/acheckler/tinctor" target="_blank"
+              >Repository</a
+            >
+            <a href="https://tinctor.vercel.app/" target="_blank">Live App</a>
+          </div>
+        </div>
+
+        <div id="frigo">
+          <div class="frigo-text">
+            <h3>Frigo</h3>
+            <p>
+              An application built to help reduce food waste by keeping track of
+              what perishables are currently in the users fridge, and when they
+              were purchased. A recipe search function is also included for
+              users that need inspriation to use what they currently have.
+              </p>
+              <p>
+              <span class="lang-span2">Built using ReactJs, NodeJs, ExpressJs, PostgreSQL and CSS3.</span>
+            </p>
+            <a href="https://github.com/acheckler/frigo" target="_blank"
+              >Repository</a
+            >
+            <a href="https://frigo-food.vercel.app/" target="_blank"
+              >Live App</a
+            >
+          </div>
+          <div>
+            <img src="images/frigo-1.png" alt="frigo" />
+          </div>
+        </div>
+
+        <div id="cc">
+          <div><img src="/images/CC-1.jpg" alt="content-curator" /></div>
+          <div class="cc-text">
+            <h3>Content Curator</h3>
+            <p>
+              Content Curator is an app for anyone who has a topic they'd like
+              to post about, but no content to go with it. Free to use unsplash
+              images and credited quotes are displayed for the user based on
+              their search terms.
+            </p>
+            <p>
+              <span class="lang-span2">Built using JavaScript, jQuery, HTML5, and CSS3.</span>
+            </p>
+            <a
+              href="https://github.com/acheckler/IG_Content_Inspo_App"
+              target="_blank"
+            >
+              Repository
+            </a>
+            <a
+              href="https://acheckler.github.io/IG_Content_Inspo_App"
+              target="_blank"
+              >Live App</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-container">
+          <div class="form">
+            <p>
+              Have a question or want to work together? I'd love to hear from
+              you!
+            </p>
+
+            <form action="https://formspree.io/f/xrgoojvn" method="POST">
+              <label for="user-name">Name:</label>
+              <input id="user-name" type="text" name="name" />
+
+              <label for="user-email">Email: </label>
+              <input id="user-email" type="text" name="email" />
+
+              <label for="user-message">Message:</label>
+              <textarea id="user-message" name="message"></textarea>
+
+              <input type="submit" value="Submit" id="submit-button" />
+            </form>
+          </div>
+
+          <ul class="links">
+            <li>You can also find me here:</li>
+            <li>
+              <a href="https://github.com/acheckler" target="_blank">github</a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/allison-heckler"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a href="mailto:allisonheckler@gmail.com" target="_blank"
+                >Email</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

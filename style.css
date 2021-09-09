@@ -1,161 +1,292 @@
-/* General Styling */
+/* --------------- Universal --------------- */
 
-main {
-    display: flex;
-    flex-direction: column;
-    margin: 2vw;
-    background-color: #FFF1E6;
+html, body {
+    margin: 0px;
+    height: 100%;
 }
 
-header {
-    display: flex;
-    flex-direction: column;
-    background-color: #FFF1E6;
-    text-align: center;
-    font-family: 'Work Sans', sans-serif;
+h1, h2 {
+    color: #fb5607;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Azeret Mono', monospace;
+    border: solid 1px;
+    background-color: #005cfc;
+    border-radius: 10px;
+    padding: 0.2em 1em 0.2em 1em;
+    font-size: 2vw;
+}
+
+li {
+    list-style: none;
 }
 
 h1 {
-    color: black;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 10vw;
+    font-family: 'Azeret Mono', monospace;
+    margin: 0.05em 0em 0.05em 0em;
+    font-size: 5vw;
 }
 
 h2 {
-    font-family: 'Work Sans', sans-serif;
-    font-weight: bold;
-    font-size: 8vw;
-    padding: 0.2vw;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 3vw;
 }
 
 h3 {
-    font-size: 6vw;
+    font-size: 2vw;
 }
 
-body {
-    background-color: #EDDCD2;
+#home, #about, #projects, #contact {
+    min-height: 100vh;
+}
+
+#home, #about, #projects, #contact {
     display: flex;
-    flex-direction: column;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin: 0vw 5vw 0vw 5vw;
+}
+
+main {
+    flex-grow: 1;
+    overflow: auto;
+    font-family: 'Lato', sans-serif;
 }
 
 p {
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    font-size: 4vw;
+    font-size: 2vw;
+    letter-spacing: 0.02em;
+    line-height: 1.25em;
 }
 
-ul {
-    list-style-type: none;
+
+/* --------------- Nav --------------- */
+
+header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    margin-bottom: 3em;
 }
 
-img {
-    width: 50%;
-}
-
-a:link, a:visited {
-    background-color: #E2C6B6;
-    color: white;
-    padding: 1vw 2vw;
+#menu {
+    width: 100%;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    margin-right: 1em;
 }
 
-a:hover {
-    color: black;
-    text-decoration: underlined;
-}
-
-.group {
-    flex-direction: column;
-    flex: 1;
-    margin: 2vw;
-}
-
-#intro {
-    color: red;
-}
-
-/* Navigation */
-
-header nav {
+nav {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-bottom: 2vw;
-}
-
-header nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    padding-inline-start: 0px;
+    align-items: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 #menu li {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    margin: 0.2em 0.3em 0em 0.3em
+
+}
+
+#menu li a {
+    padding: 0.2em 1em 0.2em 1em;
+
+}
+
+/* --------------- Landing --------------- */
+
+.intro {
     display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.intro-image {
+    text-align: center;
+}
+
+.intro-image img {
+    border-radius: 50%;
+    max-width: 35vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro h2 {
+    color: black;
+    margin: 1em 0em 0em 0em;
+}
+
+#highlight {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+#highlight::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 5px;
+    left: -5px;
+    background: rgba(255, 156, 51, 0.25);
+    z-index: -1;
+}
+
+/* --------------- About --------------- */
+
+#languages {
+    display: inline-grid;
+    list-style: decimal-leading-zero;
+    margin-top: 0.2em;
+}
+
+#languages li:nth-child(n+3) {
+    grid-row: first-line / 3;
 }
 
 #languages li {
-    font-size: 3.5vw;
+    margin: 0.2em 0.5em 0em 0.5em;
 }
 
-/* form */
-
-form label {
-    display: block;
-    padding: 10px;
-    font-size: 4vw
+#languages li::marker {
+    color: #ff8200;
 }
 
-input[type=text] {
-    width: 40vw;
-    height: 4vh;
+.lang-span {
+    font-weight: 500;
+    font-family: 'Roboto Mono', monospace;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
 }
 
-textarea {
-    margin-bottom: 15px;
-    height: 6vh;
-    width: 40vw;
+.lang-span::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 5px;
+    left: -9px;
+    background: rgba(255, 156, 51, 0.25);
+    z-index: -1;
+}
+
+/* --------------- Projects --------------- */
+
+
+#projects {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#tinctor, #cc {
+    width: 80%;
+   
+    display: inline-flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+#frigo {
+    width: 80%;
+ 
+    display: inline-flex;
+    text-align: end;
+    margin-left: auto;
+}
+
+.t-text, .cc-text {
+    padding-left: 1em;
+}
+
+.frigo-text {
+    padding-right: 1em;
+}
+
+#projects img {
+    height: 100%;
+    width: 20vw;
+    border: solid 1px;
+    border-radius: 10px;
+}
+
+#projects h3 {
+    font-size: 2.5vw;
+}
+
+a {
+    text-decoration: none;
+    color: #005cfc;
+    font-family: 'Azeret Mono', monospace;
+    border: solid 1px;
+    border-radius: 10px;
+    padding: 0.2em 1em 0.2em 1em;
+    font-size: 2vw;
+}
+
+#tinctor, #frigo {
+    margin-bottom: 2em;
+}
+
+.lang-span2 {
+    font-family: 'Roboto Mono', monospace;
+    color: #003da5;
+    
+}
+
+/* --------------- Contact --------------- */
+
+#contact {
+    flex-direction: column;
+    justify-content: center;
+    /* flex-wrap: nowrap; */
+    
+
+}
+
+.contact-container {
+    display: inline-flex;
+    align-items:baseline;
+}
+
+.form {
+    width: 50%;
+    text-align: left;
+}
+
+label {
+    display: inline-block;
+    font-size: 2vw;
+}
+
+input[type=text], textarea {
+    width: 100%;
+    height: 4vw;
+}
+
+.links li {
+    padding: 0.5em 1em 0.5em 1em;
+    font-size: 2vw;
 }
 
 #submit-button {
-    width: 40vw;
-    height: 3vh;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1vh;
-}
-
-#contact {
-    margin-bottom: 2vh;
-}
-
-/* Desktop Styles */
-
-@media all and (min-width: 1025px) {
-    h1 {
-        font-size: 5vw;
-    }
-    h2 {
-        font-size: 2.5vw;
-        padding: 0.2vw;
-    }
-    h3 {
-        font-size: 2vw;
-    }
-    p {
-        font-size: 1.5vw;
-    }
-    #languages li {
-        font-size: 1.2vw;
-    }
-    form label {
-        font-size: 2vw
-    }
+    text-decoration: none;
+    color: #005cfc;
+    font-weight:900;
+    background-color: transparent;
+    font-family: 'Azeret Mono', monospace;
+    border: solid 1px;
+    border-radius: 10px;
+    padding: 0.2em 1em 0.2em 1em;
+    font-size: 2vw;
+    margin-top: 1em;
 }
