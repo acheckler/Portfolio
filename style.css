@@ -39,9 +39,16 @@ h3 {
     font-size: 2vw;
 }
 
-#home, #about, #projects, #contact {
-    min-height: 100vh;
+#home {
+    min-height: 30vh;
 }
+
+@media only screen and (min-width: 1024px) {
+    #home, #about, #projects, #contact {
+        min-height: 100vh;
+    }
+  }
+
 
 #home, #about, #projects, #contact {
     display: flex;
@@ -248,14 +255,11 @@ a {
 #contact {
     flex-direction: column;
     justify-content: center;
-    /* flex-wrap: nowrap; */
-    
-
 }
 
 .contact-container {
     display: inline-flex;
-    align-items:baseline;
+    align-items:center;
 }
 
 .form {
